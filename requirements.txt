@@ -1,0 +1,9 @@
+pandas
+scipy
+numpy
+matplotlib
+scikit-learn
+keras
+keras-core
+torch
+imbalanced-learn
