@@ -1,4 +1,4 @@
-<img width="336" alt="image" src="https://github.com/user-attachments/assets/ee2058a4-51d7-482b-8663-99f01c753ccc" /># Physionet Challenge 2017 : Atrial Fibrilation Classification on single lead ECG
+# Physionet Challenge 2017 : Atrial Fibrilation Classification on single lead ECG
 
 ### Summary :
 - Download Dataset
@@ -7,7 +7,7 @@
 - Test model
 
 ### Short explaination :
-###### Pathophysiology :
+##### Pathophysiology :
 Atrial fibrilation(AF) is the most common arrhythmia with 1% of prevalences in Worldwide. 
 The ECG findings is the most important diagnostic to observe a AF. 
 In the last decade, a new approach of medicine permit by the arrive of smartwaches : Personalized medecine, permit to people to survey their heath.
