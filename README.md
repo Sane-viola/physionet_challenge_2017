@@ -7,7 +7,8 @@
 - Test model
 
 ### Assumption :
-**Challenge Details **: ([Physionet Challenge 2017](https://physionet.org/content/challenge-2017/1.0.0/)
+**Challenge Details **: [Physionet Challenge 2017](https://physionet.org/content/challenge-2017/1.0.0/)
+
 Due to the fact that Test dataset is not leak, Validation correspond to the test dataset
 
 
