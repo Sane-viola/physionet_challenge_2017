@@ -28,7 +28,12 @@ ECG findings :
 ### Download Dataset :
 The training set contains 8,528 single lead ECG recordings, between 9s to 60s of temporal signal. 
 4 classes are available : 
-- Normal class : non arrythmia on a signle lead 
+- Normal class : non arrythmia on a single lead
+- Atrial fibrilation class : Arrythmia correspind to the ECG findings Above
+- Other arrythmia class : Important to classifies but impossibility to determine the type of Arrythmia (Atrial Flutter, BAV, Cardiac stroke etc...), very important to obtain a good sensenbility.
+- Noise class : Different type of noise can appear, movement noise, high heart rate etc....
+
+
 [**Dataset Challenge Here**](https://physionet.org/content/challenge-2017/1.0.0/)
 <img width="414" alt="image" src="https://github.com/user-attachments/assets/7b3ae52f-0de3-4361-98ce-474010b25e56" />
 
