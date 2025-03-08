@@ -1,4 +1,4 @@
-<img width="1641" alt="Screenshot 2025-03-08 at 12 13 20 PM" src="https://github.com/user-attachments/assets/ff89a1f1-f340-4204-ac5a-6df2546c5294" /># Physionet Challenge 2017 : Atrial Fibrilation Classification on single lead ECG
+# Physionet Challenge 2017 : Atrial Fibrilation Classification on single lead ECG
 
 ### Summary :
 - Download Dataset
@@ -21,5 +21,6 @@ Train with Keras and tensorflow Backend
 Train with Keras and pytorch Backend
 
 ##### Architecture : 
-<img width="1641" alt="Screenshot 2025-03-08 at 12 13 20 PM" src="https://github.com/user-attachments/assets/5535893d-6d4f-4122-8ec9-47ee2894e9c5" />
+<img width="1638" alt="image" src="https://github.com/user-attachments/assets/dccbb574-8d94-4ece-bb5f-7ae08caad2f7" />
+
 
