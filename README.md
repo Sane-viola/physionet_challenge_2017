@@ -23,8 +23,11 @@ ECG findings :
 
 ### Assumption :
 **Test Dataset Assumption** : Due to the fact that Test dataset is not leak, Validation correspond to the test dataset
+
 **Project Assumption** : _If a cardiologist can diagnose atrial fibrillation, deep learning can replicate this by leveraging relevant patterns_
+
 **Training Assumption** : Three Python files are available: one containing a machine learning model, and the other two implementing deep learning models. Both deep learning models use Keras, but with different backends. Deep Learning model can train on GPU or swith on CPU if needed
+
 **Beginner Friendly Assumption** : The model is trained on both a GPU (A40) and, due to its low complexity and the small data size (1D signal), it can also be trained on a CPU (MacBook M2).
 
 
@@ -39,33 +42,42 @@ The training set contains 8,528 single lead ECG recordings, between 9s to 60s of
 
 [**Dataset Challenge Here**](https://physionet.org/content/challenge-2017/1.0.0/)
 
-<img width="800" alt="image" src="https://github.com/user-attachments/assets/7b3ae52f-0de3-4361-98ce-474010b25e56" />
+<p align="center">
+<img width="1200" alt="Screenshot 2025-03-09 at 10 26 00 AM" src="https://github.com/user-attachments/assets/351adc77-3873-4a5e-bf40-ec4e178d0d24" />
+</p>
 
 ### Preprocessing 
 
+<p align="center">
 <img width="1400" alt="Screenshot 2025-03-09 at 10 33 13 AM" src="https://github.com/user-attachments/assets/977e7765-678a-40ae-aedb-9634ae4d8fbe" />
-
+</p>
 
 ### Model :
 
 ##### Deep Learning Architecture : 
 
+<p align="center">
 <img width="1400" alt="image" src="https://github.com/user-attachments/assets/dccbb574-8d94-4ece-bb5f-7ae08caad2f7" />
+</p>
 
 ##### Deep Learning training characteristics : 
 
+<p align="center">
 <img width="1400" alt="Screenshot 2025-03-09 at 10 33 13 AM" src="https://github.com/user-attachments/assets/dfb3c97a-541e-439d-836d-d1e579c79c7e" />
+</p>
 
 ##### Machine Learning Model : **Random Forest**
+
 
 ### Result : 
 
 **F1-Overall** : **0.946** 
 
-**10-Fold Cross validation F1-Overall**: 0.896 +/- 0.026 [0,852 ; 0,925] 
+**10-Fold Cross validation F1-Overall**: _0.896 +/- 0.026 [0,852 ; 0,925]_
 
 **Confusion Matrix** : 
 
+<p align="center">
 <img width="373" alt="image" src="https://github.com/user-attachments/assets/8bac8cc2-672f-405a-aec3-39be9fce1969" />
-
+</p>
 
