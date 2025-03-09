@@ -1,11 +1,14 @@
 # Physionet Challenge 2017 : Atrial Fibrilation Classification on single lead ECG
 
 ### Author : **Sane Viola**
+
 ### Summary :
-- Download Dataset 
-- Train Deep Learning model on Keras with Pytorch Backend
-- Train Deep Learning model on Keras with Tensorflow Backend
-- Train a Random Forest model 
+- Short Explaination: Pathophysiology and epidemiology of AFib
+- Assumption of this project
+- Download Dataset
+- Preprocessing steps
+- Model
+- Result
 
 ### Short explaination :
 ##### Pathophysiology :
@@ -20,8 +23,8 @@ ECG findings :
 ### Assumption :
 **Test Dataset Assumption** : Due to the fact that Test dataset is not leak, Validation correspond to the test dataset
 **Project Assumption** : _If a cardiologist can diagnose atrial fibrillation, deep learning can replicate this by leveraging relevant patterns_
-**Training Assumption** : Three Python files are available: one containing a machine learning model, and the other two implementing deep learning models. Both deep learning models use Keras, but with different backends.
-
+**Training Assumption** : Three Python files are available: one containing a machine learning model, and the other two implementing deep learning models. Both deep learning models use Keras, but with different backends. Deep Learning model can train on GPU or swith on CPU if needed
+**Beginner Friendly Assumption** : The model is trained on both a GPU (A40) and, due to its low complexity and the small data size (1D signal), it can also be trained on a CPU (MacBook M2).
 
 
 ### Download Dataset :
@@ -38,15 +41,17 @@ The training set contains 8,528 single lead ECG recordings, between 9s to 60s of
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/7b3ae52f-0de3-4361-98ce-474010b25e56" />
 
 
-### Deep Learning :
-Train on GPU
-Train on CPU
-Train with Keras and tensorflow Backend
-Train with Keras and pytorch Backend
+### Model :
 
-##### Architecture : 
+##### Deep Learning Architecture : 
+
 <img width="1400" alt="image" src="https://github.com/user-attachments/assets/dccbb574-8d94-4ece-bb5f-7ae08caad2f7" />
 
+##### Deep Learning training characteristics : 
+
+<img width="1400" alt="Screenshot 2025-03-09 at 10 33 13 AM" src="https://github.com/user-attachments/assets/dfb3c97a-541e-439d-836d-d1e579c79c7e" />
+
+##### Machine Learning Model : **Random Forest**
 
 ### Result : 
 
@@ -54,7 +59,7 @@ Train with Keras and pytorch Backend
 
 **10-Fold Cross validation F1-Overall**: 0.896 +/- 0.026 [0,852 ; 0,925] 
 
-Confusion Matrix : 
+**Confusion Matrix** : 
 
 <img width="373" alt="image" src="https://github.com/user-attachments/assets/8bac8cc2-672f-405a-aec3-39be9fce1969" />
 
