@@ -49,7 +49,7 @@ The training set contains 8,528 single lead ECG recordings, between 9s to 60s of
 ### Preprocessing 
 
 <p align="center">
-<img width="1400" alt="Screenshot 2025-03-09 at 10 33 13 AM" src="https://github.com/user-attachments/assets/977e7765-678a-40ae-aedb-9634ae4d8fbe" />
+<img width="1595" alt="Screenshot 2025-03-09 at 10 42 37 AM" src="https://github.com/user-attachments/assets/12e50e96-311d-4143-80ce-0195da7f6b14" />
 </p>
 
 ### Model :
@@ -78,6 +78,6 @@ The training set contains 8,528 single lead ECG recordings, between 9s to 60s of
 **Confusion Matrix** : 
 
 <p align="center">
-<img width="373" alt="image" src="https://github.com/user-attachments/assets/8bac8cc2-672f-405a-aec3-39be9fce1969" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/8bac8cc2-672f-405a-aec3-39be9fce1969" />
 </p>
 
