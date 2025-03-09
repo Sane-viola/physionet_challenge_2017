@@ -2,6 +2,29 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+"""
+Author: Sane Viola 
+Github : https://github.com/Sane-viola
+Linkedin : www.linkedin.com/in/sane-viola
+
+Date: 2025-03-09
+Description: Classification on single lead ECG, database from Physionet challenge 2017 : https://physionet.org/content/challenge-2017/1.0.0/
+
+
+Summary:
+1. Import Dependencies – Load required libraries for data processing, deep learning, and evaluation.
+2. Check GPU Availability – Configure the script to run on GPU if available; otherwise, use CPU.
+3. Load Data – Read training and testing datasets from CSV files.
+4. Preprocess Data – Filter, normalize, and segment ECG signals.
+5. Apply Data Augmentation – Use SMOTE to balance the dataset.
+6. Prepare Data for Training – Convert data into tensors and apply one-hot encoding.
+7. Load Model – Initialize and compile the CNN-BiLSTM model.
+8. Train Model – Train the model using the prepared dataset.
+9. Evaluate Model – Predict test labels and compute performance metrics.
+10. Save and Display Results – Store the confusion matrix and F1 score.
+
+"""
+
 # Import necessary libraries
 #### Import
 import numpy as np  
