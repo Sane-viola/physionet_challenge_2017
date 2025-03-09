@@ -290,7 +290,8 @@ matrix_result_test.append(combined_confusion_matrix)
 print(combined_confusion_matrix)
 print(f1_data)
 
-
+path = "../save_output"
+os.makedirs(path, exist_ok=True)  # Creates the directory if it doesn't exist
 file = '../save_output/matrix_result.npy'
 np.save(file, matrix_result_test, allow_pickle=True)
 file = '../save_output/f1_data_score.npy'
