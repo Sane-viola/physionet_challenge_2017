@@ -3,7 +3,7 @@
 @@ Author : Sane Viola @@
 ```
 $$
-{\color{red}Author : Sane Viola}
+{\color{red}Author : Sane       Viola}
 $$
 
 ### Summary :
