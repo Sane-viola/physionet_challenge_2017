@@ -7,3 +7,4 @@ keras
 keras-core
 torch
 imbalanced-learn
+tensorflow
