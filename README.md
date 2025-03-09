@@ -1,6 +1,6 @@
 # Physionet Challenge 2017 : Atrial Fibrilation Classification on single lead ECG
 ```diff
-### Author : **Sane Viola**
+@@ Author : Sane Viola @@
 ```
 
 
