@@ -45,15 +45,17 @@ Train with Keras and tensorflow Backend
 Train with Keras and pytorch Backend
 
 ##### Architecture : 
-<img width="1638" alt="image" src="https://github.com/user-attachments/assets/dccbb574-8d94-4ece-bb5f-7ae08caad2f7" />
+<img width="1400" alt="image" src="https://github.com/user-attachments/assets/dccbb574-8d94-4ece-bb5f-7ae08caad2f7" />
 
 
 ### Result : 
 
 **F1-Overall** : **0.946** 
+
 **10-Fold Cross validation F1-Overall**: 0.896 +/- 0.026 [0,852 ; 0,925] 
 
 Confusion Matrix : 
+
 <img width="373" alt="image" src="https://github.com/user-attachments/assets/8bac8cc2-672f-405a-aec3-39be9fce1969" />
 
 
