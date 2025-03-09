@@ -1,8 +1,8 @@
 # Physionet Challenge 2017 : Atrial Fibrilation Classification on single lead ECG
 ```diff
-- text in red
-```
 ### Author : **Sane Viola**
+```
+
 
 ### Summary :
 - Short Explaination: Pathophysiology and epidemiology of AFib
