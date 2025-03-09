@@ -1,10 +1,7 @@
 # Physionet Challenge 2017 : Atrial Fibrilation Classification on single lead ECG
-```diff
-@@ Author : Sane Viola @@
-```
-$$
-{\color{red}Author : Sane       Viola}
-$$
+
+### Author : Sane Viola
+For collaboration or question, feel free to reach me at my linkedin : www.linkedin.com/in/sane-viola
 
 ### Summary :
 - Short Explaination: Pathophysiology and epidemiology of AFib
@@ -43,6 +40,10 @@ The training set contains 8,528 single lead ECG recordings, between 9s to 60s of
 [**Dataset Challenge Here**](https://physionet.org/content/challenge-2017/1.0.0/)
 
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/7b3ae52f-0de3-4361-98ce-474010b25e56" />
+
+### Preprocessing 
+
+<img width="1400" alt="Screenshot 2025-03-09 at 10 33 13 AM" src="https://github.com/user-attachments/assets/977e7765-678a-40ae-aedb-9634ae4d8fbe" />
 
 
 ### Model :
