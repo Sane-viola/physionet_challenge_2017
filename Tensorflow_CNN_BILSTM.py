@@ -12,7 +12,7 @@ Description: Classification on single lead ECG, database from Physionet challeng
 
 Summary:
 1. Import Dependencies – Load required libraries for data processing, deep learning, and evaluation.
-2. Check GPU Availability – Configure the script to run on GPU if available; otherwise, use CPU.
+2. Check GPU Availability – Observe if the GPU is available, otherwise run on CPU (tensorflow spec)
 3. Load Data – Read training and testing datasets from CSV files.
 4. Preprocess Data – Filter, normalize, and segment ECG signals.
 5. Apply Data Augmentation – Use SMOTE to balance the dataset.
@@ -39,10 +39,11 @@ from imblearn.over_sampling import SMOTE
 import scipy.signal as sig
 
 #### Deep learning utilities
-os.environ["KERAS_BACKEND"] = "torch"# Set the Keras backend to PyTorch
-import keras_core as keras #for Pytorch Backend
-import torch #Torch function for GPU (A40)
-from keras_core.utils import to_categorical
+import keras
+import tensorflow as tf
+from tensorflow.keras.utils import to_categorical
+from keras.layers import Conv1D, Flatten, Dense, Dropout, UpSampling1D, MaxPooling1D, GlobalAveragePooling1D
+
 
 # Load Model
 from model.CNN_BILSTM_keras import CNN_BISLTM
@@ -53,17 +54,16 @@ from sklearn.metrics import confusion_matrix
 from utils.f1_score_function import f1_function
 
 #############################################
-# Train with Keras (Pytorch Backend) on GPU #
+# Train with Keras (Tensorflow Backend) on GPU #
 #############################################
 
 print("Current Keras backend:", keras.backend.backend())
 
-if torch.cuda.is_available() and torch.cuda.device_count() > 3:
-    device = torch.device("cuda:3")  # Specify GPU 3
-    print("Using GPU 3 for training")
-else:
-    device = torch.device("cpu")  # Use CPU if GPU 4 is not available
-    print("GPU 3 is not available, using CPU")
+# Check available GPUs
+print("Available GPUs:", tf.config.list_physical_devices('GPU'))
+
+# Set TensorFlow to use GPU (if available)
+device_name = "/GPU:0"  # Use "/GPU:1", "/GPU:2" if multiple GPUs exist
 
 
 #############
@@ -186,7 +186,7 @@ print(train.shape)
 #### Test Split & Label
 a = np.array(X_test[:])
 data_test = []
-labels_test = []
+test = []
 data_RR_test = []
 # Data : 11k to 2700 
 A = 0
@@ -229,22 +229,22 @@ for i in range(len(a)):
     data  = (data-mean)/std
     
     if shape[0] >= 6000:
-        labels_test.append(AF)
+        test.append(AF)
         data_test.append(data[3000:6000])
     elif shape[0] >= 3000:
-        labels_test.append(AF)
+        test.append(AF)
         data_test.append(data[0:3000])
     else:
         continue
             
 
-test = np.asarray(data_test,'float32')
-test = np.expand_dims(data_test, axis=-1)
+x_test = np.asarray(data_test,'float32')
+x_test = np.expand_dims(data_test, axis=-1)
 
 
 # One-hot Encoded
 labels_train = to_categorical(labels_train, num_classes=4)
-labels_test = to_categorical(labels_test, num_classes=4)
+y_test = to_categorical(test, num_classes=4)
 
 ##############
 # Load Model #
@@ -265,22 +265,20 @@ f1_list = []
 # Prepare tensor #
 ##################
 
-labels_test = np.argmax(labels_test, axis=1)
+y_test = np.argmax(y_test, axis=1)
 
 X_train,y_train = train,labels_train # Rename
-X_train = torch.tensor(np.array(X_train), device=device, dtype=torch.float32)
-y_train = torch.tensor(np.array(y_train), device=device, dtype=torch.float32)
-test_tensor = torch.tensor(np.array(test), device=device, dtype=torch.float32)
 
 # Train 
-epoch = 90
-model.fit(X_train.cpu().numpy(), y_train.cpu().numpy(),batch_size=2048,epochs=epoch)
+epoch = 2
+with tf.device('/GPU:0'): #if GPU is not available, return on CPU training
+    model.fit(X_train, y_train,batch_size=2048,epochs=epoch)
 
 
 # Predict
-y_prediction = model.predict(test_tensor.cpu().numpy())
+y_prediction = model.predict(x_test)
 y_prediction = np.argmax(y_prediction, axis=1)
-combined_confusion_matrix = confusion_matrix(labels_test, y_prediction)
+combined_confusion_matrix = confusion_matrix(y_test, y_prediction)
 f1_data = f1_function(combined_confusion_matrix)
 matrix_result_test.append(combined_confusion_matrix)
 
