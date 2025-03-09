@@ -35,7 +35,7 @@ The training set contains 8,528 single lead ECG recordings, between 9s to 60s of
 
 [**Dataset Challenge Here**](https://physionet.org/content/challenge-2017/1.0.0/)
 
-<img width="414" alt="image" src="https://github.com/user-attachments/assets/7b3ae52f-0de3-4361-98ce-474010b25e56" />
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/7b3ae52f-0de3-4361-98ce-474010b25e56" />
 
 
 ### Deep Learning :
