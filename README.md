@@ -2,7 +2,7 @@
 ```diff
 @@ Author : Sane Viola @@
 ```
-$${\color{red}Red}$$
+$${\color{red}Author : Sane Viola}$$
 
 ### Summary :
 - Short Explaination: Pathophysiology and epidemiology of AFib
